@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import tandooriImg from '../assets/tandoori.png';
+import chickenImg from '../assets/chicken.png';
 
 const Hero = () => {
     return (
@@ -111,7 +113,7 @@ const Hero = () => {
                             backgroundColor: '#111'
                         }}
                     >
-                        <img src="/hero_burger_1773831784968.png" style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Le Burger" />
+                        <img src={tandooriImg} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Le Tandoori Sandwich" />
                     </motion.div>
 
                     {/* Bottom/Left Card */}
@@ -133,7 +135,7 @@ const Hero = () => {
                             backgroundColor: '#111'
                         }}
                     >
-                        <img src="/fried_chicken_1773831797726.png" style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Le Tandoori" />
+                        <img src={chickenImg} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Le Sandwich Poulet Fromagère" />
                     </motion.div>
 
                     {/* Bold text floating on the far right */}

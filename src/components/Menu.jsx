@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import tandooriImg from '../assets/tandoori.png';
 
 const menuItems = [
     {
@@ -14,7 +15,7 @@ const menuItems = [
         title: 'SANDWICH TANDOORI',
         price: '8.50€',
         description: 'Poulet mariné savoureux aux épices tandoori, pain sandwich maison, sauce blanche, salade fraîche.',
-        image: '/fried_chicken_1773831797726.png'
+        image: tandooriImg
     },
     {
         id: 3,

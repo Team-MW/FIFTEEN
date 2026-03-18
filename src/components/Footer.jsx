@@ -1,10 +1,11 @@
 import React from 'react';
 import { Instagram, Facebook, Twitter, MapPin, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <footer style={{ backgroundColor: '#000', paddingTop: '5rem', borderTop: '1px solid #222' }}>
-            <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem', paddingBottom: '4rem' }}>
+            <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', paddingBottom: '4rem' }}>
 
                 {/* Brand */}
                 <div>
@@ -29,10 +30,10 @@ const Footer = () => {
                 <div>
                     <h4 style={{ fontSize: '1.5rem', color: '#fff', marginBottom: '1.5rem' }}>LIENS UTILES</h4>
                     <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                        <li><a href="#" style={{ color: '#888', transition: 'color 0.3s ease' }} onMouseOver={e => e.currentTarget.style.color = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.color = '#888'}>La Carte</a></li>
-                        <li><a href="#" style={{ color: '#888', transition: 'color 0.3s ease' }} onMouseOver={e => e.currentTarget.style.color = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.color = '#888'}>Notre Histoire</a></li>
-                        <li><a href="#" style={{ color: '#888', transition: 'color 0.3s ease' }} onMouseOver={e => e.currentTarget.style.color = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.color = '#888'}>Click & Collect</a></li>
-                        <li><a href="#" style={{ color: '#888', transition: 'color 0.3s ease' }} onMouseOver={e => e.currentTarget.style.color = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.color = '#888'}>FAQ</a></li>
+                        <li><a href="/#menu" style={{ color: '#888', transition: 'color 0.3s ease' }} onMouseOver={e => e.currentTarget.style.color = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.color = '#888'}>La Carte</a></li>
+                        <li><a href="/#location" style={{ color: '#888', transition: 'color 0.3s ease' }} onMouseOver={e => e.currentTarget.style.color = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.color = '#888'}>Restaurants</a></li>
+                        <li><a href="/#faq" style={{ color: '#888', transition: 'color 0.3s ease' }} onMouseOver={e => e.currentTarget.style.color = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.color = '#888'}>FAQ</a></li>
+                        <li><Link to="/mentions-legales" style={{ color: '#888', transition: 'color 0.3s ease' }} onMouseOver={e => e.currentTarget.style.color = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.color = '#888'}>Mentions légales</Link></li>
                     </ul>
                 </div>
 
@@ -55,7 +56,7 @@ const Footer = () => {
 
             <div style={{ background: '#111', padding: '1.5rem 0', textAlign: 'center', borderTop: '1px solid #222' }}>
                 <p style={{ color: '#555', fontSize: '0.9rem' }}>
-                    &copy; {new Date().getFullYear()} FIFTEEN. Tous droits réservés. | Mentions légales
+                    &copy; {new Date().getFullYear()} FIFTEEN. Tous droits réservés.
                 </p>
             </div>
         </footer>

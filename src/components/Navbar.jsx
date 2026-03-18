@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Menu as MenuIcon, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -13,6 +15,11 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const getHref = (hash) => {
+        if (location.pathname === '/') return hash;
+        return `/${hash}`;
+    };
 
     return (
         <>
@@ -34,15 +41,16 @@ const Navbar = () => {
                 }}
             >
                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <a href="/" style={{ fontSize: '2.5rem', fontWeight: 700, fontFamily: "'Anton', sans-serif", color: 'var(--primary)', letterSpacing: '2px' }}>
+                    <Link to="/" style={{ fontSize: '2.5rem', fontWeight: 700, fontFamily: "'Anton', sans-serif", color: 'var(--primary)', letterSpacing: '2px' }}>
                         FIFTEEN
-                    </a>
+                    </Link>
 
                     {/* Desktop Menu */}
                     <div className="desktop-only" style={{ display: 'flex', gap: '3rem', alignItems: 'center' }}>
                         <ul style={{ display: 'flex', gap: '2rem', alignItems: 'center', fontFamily: "'Anton', sans-serif", fontSize: '1.2rem', margin: 0 }}>
-                            <li><a href="#menu" style={{ transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--primary)'} onMouseOut={e => e.target.style.color = 'var(--text-light)'}>LA CARTE</a></li>
-                            <li><a href="#concept" style={{ transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--primary)'} onMouseOut={e => e.target.style.color = 'var(--text-light)'}>LE CONCEPT</a></li>
+                            <li><a href={getHref('#menu')} style={{ transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--primary)'} onMouseOut={e => e.target.style.color = 'var(--text-light)'}>LA CARTE</a></li>
+                            <li><a href={getHref('#concept')} style={{ transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--primary)'} onMouseOut={e => e.target.style.color = 'var(--text-light)'}>LE CONCEPT</a></li>
+                            <li><a href={getHref('#location')} style={{ transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--primary)'} onMouseOut={e => e.target.style.color = 'var(--text-light)'}>NOS RESTOS</a></li>
                         </ul>
                         <button
                             style={{
@@ -102,8 +110,10 @@ const Navbar = () => {
                             gap: '2rem'
                         }}
                     >
-                        <a href="#menu" onClick={() => setIsOpen(false)} style={{ fontSize: '3rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>LA CARTE</a>
-                        <a href="#concept" onClick={() => setIsOpen(false)} style={{ fontSize: '3rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>LE CONCEPT</a>
+                        <Link to="/" onClick={() => setIsOpen(false)} style={{ fontSize: '3rem', fontFamily: "'Anton', sans-serif", color: 'var(--primary)', marginBottom: '2rem' }}>ACCUEIL</Link>
+                        <a href={getHref('#menu')} onClick={() => setIsOpen(false)} style={{ fontSize: '2.5rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>LA CARTE</a>
+                        <a href={getHref('#concept')} onClick={() => setIsOpen(false)} style={{ fontSize: '2.5rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>LE CONCEPT</a>
+                        <a href={getHref('#location')} onClick={() => setIsOpen(false)} style={{ fontSize: '2.5rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>RESTAURANTS</a>
 
                         <button
                             onClick={() => setIsOpen(false)}

@@ -5,29 +5,29 @@ const menuItems = [
     {
         id: 1,
         title: 'THE CLASSIC SMASH',
-        price: '9.90€',
-        description: 'Double steak smashé, double cheddar, pickles, oignons caramélisés, sauce secrète.',
+        price: '9.00€',
+        description: 'Double steak smashé 100% bœuf, double cheddar, pickles, oignons caramélisés, sauce secrète, pain brioché.',
         image: '/hero_burger_1773831784968.png'
     },
     {
         id: 2,
-        title: 'CRISPY TENDERS',
-        price: '7.50€',
-        description: 'Poulet frit croustillant maison, mariné aux épices secrètes, servi avec sauce spicy.',
+        title: 'SANDWICH TANDOORI',
+        price: '8.50€',
+        description: 'Poulet mariné savoureux aux épices tandoori, pain sandwich maison, sauce blanche, salade fraîche.',
         image: '/fried_chicken_1773831797726.png'
     },
     {
         id: 3,
-        title: 'LOADED FRIES',
-        price: '6.50€',
-        description: 'Frites dorées garnies de sauce fromagère maison, jalapeños et bacon croustillant.',
+        title: 'FRITES MAISON',
+        price: '3.50€',
+        description: 'Nos véritables frites maison, coupées chaque matin et cuites à la perfection pour un croustillant inégalé.',
         image: '/fries_1773831809051.png'
     },
     {
         id: 4,
-        title: 'SPICY SMASH',
-        price: '10.90€',
-        description: 'Double steak smashé, cheddar fondu, sauce piquante maison, piments jalapeños.',
+        title: 'SANDWICH MAISON',
+        price: '8.00€',
+        description: 'Le classique incontournable : pain artisanal de qualité, garnitures au choix, viandes 100% halal.',
         image: '/hero_burger_1773831784968.png'
     }
 ];
@@ -39,7 +39,7 @@ const Menu = () => {
                 <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                     <h2 style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', color: '#fff', textShadow: '0 5px 15px rgba(0,0,0,0.5)' }}>LA <span className="text-secondary">CARTE</span></h2>
                     <p style={{ fontSize: '1.1rem', color: '#999', maxWidth: '600px', margin: '0.5rem auto' }}>
-                        Des ingrédients premium, une technique parfaitement exécutée, le tout pour une explosion de saveurs.
+                        Des burgers et sandwichs préparés à la commande, avec des frites maison incroyables.
                     </p>
                 </div>
 

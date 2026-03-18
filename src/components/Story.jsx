@@ -16,17 +16,25 @@ const Story = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
+                    style={{ width: '100%', display: 'flex', justifyContent: 'center' }}
                 >
-                    <img
-                        src="/fried_chicken_1773831797726.png"
-                        alt="Crispy Fried Chicken"
+                    {/* Instagram Embed Iframe */}
+                    <iframe
+                        src="https://www.instagram.com/p/DJuFIiqs_9y/embed"
+                        width="100%"
+                        height="500"
+                        frameBorder="0"
+                        scrolling="no"
+                        allowTransparency="true"
                         style={{
-                            width: '100%',
                             borderRadius: '20px',
                             boxShadow: '0 20px 40px rgba(0,0,0,0.8)',
-                            border: '2px solid #222'
+                            border: '2px solid #222',
+                            backgroundColor: '#fff',
+                            maxWidth: '400px'
                         }}
-                    />
+                        title="Fifteen Instagram Video"
+                    ></iframe>
                 </motion.div>
 
                 <motion.div
@@ -37,17 +45,17 @@ const Story = () => {
                 >
                     <h2 style={{ fontSize: '3rem', color: '#fff', marginBottom: '1rem' }}>NOTRE <span className="text-primary">CONCEPT</span></h2>
                     <h3 style={{ fontSize: '1.5rem', color: '#888', marginBottom: '2rem', fontFamily: "'Inter', sans-serif", fontWeight: 400, textTransform: 'none' }}>
-                        L'excellence de la street food américaine, revisitée avec passion.
+                        Burgers, sandwichs et frites 100% halal et faits maison.
                     </h3>
                     <p style={{ color: '#ccc', lineHeight: 1.8, fontSize: '1.1rem', marginBottom: '1.5rem' }}>
-                        Chez <strong>FIFTEEN</strong>, nous croyons qu'un bon fast-food n'est pas synonyme de mauvaise qualité. Nous avons étudié les meilleures recettes de smash burgers pour vous offrir une expérience unique : une croûte croustillante à l'extérieur, un cœur juteux à l'intérieur.
+                        Créé en 2022, <strong>FIFTEEN</strong> s'est imposé avec un seul but : proposer <strong>les sandwichs les plus géchar de Toulouse</strong> 🔥. On a mélangé l'art du smash burger puriste avec la street-food authentique ultra-généreuse, notamment avec notre incontournable poulet Tandoori maison.
                     </p>
                     <p style={{ color: '#ccc', lineHeight: 1.8, fontSize: '1.1rem', marginBottom: '2.5rem' }}>
-                        Nos viandes sont sélectionnées avec soin et certifiées, notre pain est brioché et ultra-moelleux, et notre poulet frit est mariné 24h avec notre mélange d'épices secrètes. Rejoignez le mouvement.
+                        Ici, zéro galère, que du lourd : toutes nos viandes sont strictement certifiées halal, nos frites de compétition sont coupées et cuites sur place, et les portions sont étudiées pour caler même les plus grosses faims. Pas de compromis sur le goût, on casse les codes.
                     </p>
 
                     <div className="stack-mobile" style={{ display: 'flex', gap: '1rem' }}>
-                        <button style={{
+                        <a href="https://www.ubereats.com/store/fifteen/HlYxsy62UzeHjO4kQWZfWA" target="_blank" rel="noopener noreferrer" style={{
                             background: 'var(--primary)',
                             color: '#000',
                             padding: '1rem 2.5rem',
@@ -56,11 +64,13 @@ const Story = () => {
                             fontWeight: 700,
                             fontFamily: "'Anton', sans-serif",
                             border: 'none',
-                            cursor: 'pointer'
+                            cursor: 'pointer',
+                            textDecoration: 'none',
+                            textAlign: 'center'
                         }}>
-                            NOTRE HISTOIRE
-                        </button>
-                        <button style={{
+                            UBER EATS
+                        </a>
+                        <a href="#menu" style={{
                             background: '#222',
                             color: '#fff',
                             padding: '1rem 2.5rem',
@@ -69,10 +79,12 @@ const Story = () => {
                             fontWeight: 700,
                             fontFamily: "'Anton', sans-serif",
                             border: '1px solid #444',
-                            cursor: 'pointer'
+                            cursor: 'pointer',
+                            textDecoration: 'none',
+                            textAlign: 'center'
                         }}>
-                            LES ENGAGEMENTS
-                        </button>
+                            VOIR LE MENU
+                        </a>
                     </div>
                 </motion.div>
 

@@ -36,13 +36,16 @@ const Navbar = () => {
                     backgroundColor: scrolled ? 'rgba(10, 10, 10, 0.95)' : 'transparent',
                     backdropFilter: scrolled ? 'blur(10px)' : 'none',
                     transition: 'all 0.3s ease',
-                    padding: '1rem 0',
+                    padding: '0.5rem 0',
                     borderBottom: scrolled ? '1px solid #222' : '1px solid transparent'
                 }}
             >
                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <Link to="/" style={{ fontSize: '2.5rem', fontWeight: 700, fontFamily: "'Anton', sans-serif", color: 'var(--primary)', letterSpacing: '2px' }}>
-                        FIFTEEN
+                    {/* Logo FIFTEEN matching the real branding shape */}
+                    <Link to="/" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: 1, textDecoration: 'none', margin: '0.5rem 0' }}>
+                        <span style={{ fontSize: '0.6rem', color: '#fff', fontFamily: "'Inter', sans-serif", letterSpacing: '2px', textTransform: 'uppercase' }}>Sandwichs</span>
+                        <span style={{ fontSize: '2.5rem', fontWeight: 700, fontFamily: "'Anton', sans-serif", color: 'var(--primary)', letterSpacing: '2px', marginTop: '0.2rem' }}>FIFTEEN</span>
+                        <span style={{ fontSize: '0.6rem', color: '#fff', fontFamily: "'Inter', sans-serif", letterSpacing: '2px', textTransform: 'uppercase', marginTop: '0.2rem' }}>Hamburgers</span>
                     </Link>
 
                     {/* Desktop Menu */}
@@ -52,7 +55,10 @@ const Navbar = () => {
                             <li><a href={getHref('#concept')} style={{ transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--primary)'} onMouseOut={e => e.target.style.color = 'var(--text-light)'}>LE CONCEPT</a></li>
                             <li><a href={getHref('#location')} style={{ transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--primary)'} onMouseOut={e => e.target.style.color = 'var(--text-light)'}>NOS RESTOS</a></li>
                         </ul>
-                        <button
+                        <a
+                            href="https://www.ubereats.com/store/fifteen/HlYxsy62UzeHjO4kQWZfWA"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             style={{
                                 backgroundColor: 'var(--primary)',
                                 color: '#000',
@@ -60,13 +66,15 @@ const Navbar = () => {
                                 fontSize: '1.2rem',
                                 borderRadius: '4px',
                                 textTransform: 'uppercase',
-                                transition: 'transform 0.2s ease, filter 0.2s ease'
+                                transition: 'transform 0.2s ease, filter 0.2s ease',
+                                textDecoration: 'none',
+                                fontFamily: "'Anton', sans-serif"
                             }}
                             onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'}
                             onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
                         >
                             Commander
-                        </button>
+                        </a>
                     </div>
 
                     {/* Mobile Toggle Button */}
@@ -115,7 +123,10 @@ const Navbar = () => {
                         <a href={getHref('#concept')} onClick={() => setIsOpen(false)} style={{ fontSize: '2.5rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>LE CONCEPT</a>
                         <a href={getHref('#location')} onClick={() => setIsOpen(false)} style={{ fontSize: '2.5rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>RESTAURANTS</a>
 
-                        <button
+                        <a
+                            href="https://www.ubereats.com/store/fifteen/HlYxsy62UzeHjO4kQWZfWA"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             onClick={() => setIsOpen(false)}
                             style={{
                                 backgroundColor: 'var(--primary)',
@@ -124,11 +135,13 @@ const Navbar = () => {
                                 fontSize: '1.5rem',
                                 borderRadius: '50px',
                                 textTransform: 'uppercase',
-                                marginTop: '2rem'
+                                marginTop: '2rem',
+                                textDecoration: 'none',
+                                fontFamily: "'Anton', sans-serif"
                             }}
                         >
-                            Commander
-                        </button>
+                            Commander UberEats
+                        </a>
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -42,7 +42,7 @@ const Banner = () => {
                         lineHeight: 1
                     }}
                 >
-                    PRÊT À SMASHER ?
+                    PRÊT À DÉGUSTER ?
                 </motion.h2>
                 <p style={{ color: '#222', fontSize: '1.2rem', marginBottom: '3rem', fontWeight: 600 }}>
                     Passez commande maintenant et rejoignez le mouvement FIFTEEN.

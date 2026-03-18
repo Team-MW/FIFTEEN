@@ -47,8 +47,8 @@ const Hero = () => {
                         textTransform: 'uppercase',
                         letterSpacing: '2px'
                     }}>
-                        L'ART DU <br />
-                        VRAI SMASH <br />
+                        LE VRAI <br />
+                        SANDWICH <br />
                         <span className="text-primary">& GÉCHAR</span>
                     </h1>
 

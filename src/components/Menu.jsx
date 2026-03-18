@@ -5,9 +5,9 @@ import tandooriImg from '../assets/tandoori.png';
 const menuItems = [
     {
         id: 1,
-        title: 'THE CLASSIC SMASH',
+        title: 'THE CLASSIC BURGER',
         price: '9.00€',
-        description: 'Double steak smashé 100% bœuf, double cheddar, pickles, oignons caramélisés, sauce secrète, pain brioché.',
+        description: 'Double steak 100% bœuf, double cheddar, pickles, oignons caramélisés, sauce secrète, pain brioché.',
         image: '/hero_burger_1773831784968.png'
     },
     {

@@ -6,7 +6,7 @@ const featuresList = [
     {
         icon: <Flame size={32} className="text-secondary" />,
         title: "100% PUR BŒUF",
-        desc: "Viande locale, hachée sur place tous les matins. Smashed à haute température pour une croûte caramélisée parfaite."
+        desc: "Viande locale, hachée sur place tous les matins. Cuite à haute température pour une croûte caramélisée parfaite."
     },
     {
         icon: <Star size={32} className="text-secondary" />,

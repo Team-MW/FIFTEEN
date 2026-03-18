@@ -4,10 +4,12 @@ import Home from './pages/Home';
 import LegalMentions from './pages/LegalMentions';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-container">
         <Navbar />
         <Routes>

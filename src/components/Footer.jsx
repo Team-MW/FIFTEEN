@@ -1,16 +1,25 @@
 import React from 'react';
-import { Instagram, MapPin, Mail, ShoppingBag } from 'lucide-react';
+import { Instagram, MapPin, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Logo from '../assets/logo.png'; // using actual logo file from src/assets
 
 const Footer = () => {
     return (
         <footer style={{ backgroundColor: '#000', paddingTop: '5rem', borderTop: '1px solid #222' }}>
             <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', paddingBottom: '4rem' }}>
 
-                {/* Brand */}
+                {/* Brand / Logo */}
                 <div>
-                    <h2 style={{ fontSize: '3.5rem', color: 'var(--primary)', letterSpacing: '2px', marginBottom: '0.5rem' }}>FIFTEEN</h2>
-                    <h3 style={{ fontSize: '1rem', color: '#fff', letterSpacing: '2px', marginBottom: '1.5rem', fontFamily: "'Anton', sans-serif" }}>SANDWICHS & HAMBURGERS</h3>
+                    <img
+                        src={Logo}
+                        alt="FIFTEEN Logo"
+                        style={{
+                            width: '120px',
+                            height: 'auto',
+                            marginBottom: '1.5rem',
+                            filter: 'drop-shadow(0 5px 10px rgba(0,0,0,0.5))'
+                        }}
+                    />
                     <p style={{ color: '#777', lineHeight: 1.6, marginBottom: '2rem' }}>
                         Burgers et sandwichs halal maison 🍔🍟<br />Frites maison
                     </p>

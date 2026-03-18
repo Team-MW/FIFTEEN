@@ -1,0 +1,129 @@
+import React, { useState, useEffect } from 'react';
+import { Menu as MenuIcon, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const Navbar = () => {
+    const [scrolled, setScrolled] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return (
+        <>
+            <motion.nav
+                initial={{ y: -100 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.5 }}
+                style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    zIndex: 50,
+                    backgroundColor: scrolled ? 'rgba(10, 10, 10, 0.95)' : 'transparent',
+                    backdropFilter: scrolled ? 'blur(10px)' : 'none',
+                    transition: 'all 0.3s ease',
+                    padding: '1rem 0',
+                    borderBottom: scrolled ? '1px solid #222' : '1px solid transparent'
+                }}
+            >
+                <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <a href="/" style={{ fontSize: '2.5rem', fontWeight: 700, fontFamily: "'Anton', sans-serif", color: 'var(--primary)', letterSpacing: '2px' }}>
+                        FIFTEEN
+                    </a>
+
+                    {/* Desktop Menu */}
+                    <div className="desktop-only" style={{ display: 'flex', gap: '3rem', alignItems: 'center' }}>
+                        <ul style={{ display: 'flex', gap: '2rem', alignItems: 'center', fontFamily: "'Anton', sans-serif", fontSize: '1.2rem', margin: 0 }}>
+                            <li><a href="#menu" style={{ transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--primary)'} onMouseOut={e => e.target.style.color = 'var(--text-light)'}>LA CARTE</a></li>
+                            <li><a href="#concept" style={{ transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--primary)'} onMouseOut={e => e.target.style.color = 'var(--text-light)'}>LE CONCEPT</a></li>
+                        </ul>
+                        <button
+                            style={{
+                                backgroundColor: 'var(--primary)',
+                                color: '#000',
+                                padding: '0.8rem 1.5rem',
+                                fontSize: '1.2rem',
+                                borderRadius: '4px',
+                                textTransform: 'uppercase',
+                                transition: 'transform 0.2s ease, filter 0.2s ease'
+                            }}
+                            onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'}
+                            onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
+                        >
+                            Commander
+                        </button>
+                    </div>
+
+                    {/* Mobile Toggle Button */}
+                    <button
+                        className="mobile-only"
+                        onClick={() => setIsOpen(!isOpen)}
+                        style={{
+                            background: 'transparent',
+                            color: 'var(--primary)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            zIndex: 60
+                        }}
+                    >
+                        {isOpen ? <X size={32} /> : <MenuIcon size={32} />}
+                    </button>
+                </div>
+            </motion.nav>
+
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, x: '100%' }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: '100%' }}
+                        transition={{ type: 'tween', duration: 0.3 }}
+                        style={{
+                            position: 'fixed',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100vh',
+                            backgroundColor: 'var(--bg-darker)',
+                            zIndex: 40,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            gap: '2rem'
+                        }}
+                    >
+                        <a href="#menu" onClick={() => setIsOpen(false)} style={{ fontSize: '3rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>LA CARTE</a>
+                        <a href="#concept" onClick={() => setIsOpen(false)} style={{ fontSize: '3rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>LE CONCEPT</a>
+
+                        <button
+                            onClick={() => setIsOpen(false)}
+                            style={{
+                                backgroundColor: 'var(--primary)',
+                                color: '#000',
+                                padding: '1rem 3rem',
+                                fontSize: '1.5rem',
+                                borderRadius: '50px',
+                                textTransform: 'uppercase',
+                                marginTop: '2rem'
+                            }}
+                        >
+                            Commander
+                        </button>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
+    );
+};
+
+export default Navbar;

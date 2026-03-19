@@ -5,17 +5,17 @@ import tandooriImg from '../assets/tandoori.png';
 const menuItems = [
     {
         id: 1,
+        title: 'SANDWICH TANDOORI',
+        price: '8.50€',
+        description: 'Notre spécialité incontournable : Poulet mariné savoureux aux épices tandoori, pain sandwich maison, sauce blanche, salade fraîche.',
+        image: tandooriImg
+    },
+    {
+        id: 2,
         title: 'THE CLASSIC BURGER',
         price: '9.00€',
         description: 'Double steak 100% bœuf, double cheddar, pickles, oignons caramélisés, sauce secrète, pain brioché.',
         image: '/hero_burger_1773831784968.png'
-    },
-    {
-        id: 2,
-        title: 'SANDWICH TANDOORI',
-        price: '8.50€',
-        description: 'Poulet mariné savoureux aux épices tandoori, pain sandwich maison, sauce blanche, salade fraîche.',
-        image: tandooriImg
     },
     {
         id: 3,
@@ -40,7 +40,7 @@ const Menu = () => {
                 <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                     <h2 style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', color: '#fff', textShadow: '0 5px 15px rgba(0,0,0,0.5)' }}>LA <span className="text-secondary">CARTE</span></h2>
                     <p style={{ fontSize: '1.1rem', color: '#999', maxWidth: '600px', margin: '0.5rem auto' }}>
-                        Des burgers et sandwichs préparés à la commande, avec des frites maison incroyables.
+                        Notre spécialité Tandoori, des sandwichs et burgers préparés à la commande, avec des frites maison incroyables.
                     </p>
                 </div>
 

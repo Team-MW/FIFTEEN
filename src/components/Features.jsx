@@ -5,18 +5,18 @@ import { motion } from 'framer-motion';
 const featuresList = [
     {
         icon: <Flame size={32} className="text-secondary" />,
-        title: "100% PUR BŒUF",
-        desc: "Viande locale, hachée sur place tous les matins. Cuite à haute température pour une croûte caramélisée parfaite."
+        title: "MARINADE MAISON",
+        desc: "Notre poulet est laissé à mariner longuement dans nos épices tandoori secrètes pour une explosion de saveur garantie."
     },
     {
         icon: <Star size={32} className="text-secondary" />,
-        title: "POTATO BUN",
-        desc: "Notre pain brioché aux flocons de pomme de terre, ultra-moelleux, toasté au beurre pour retenir tous les jus."
+        title: "PAIN ARTISANAL",
+        desc: "Notre pain ultra-moelleux, délicatement préparé pour accompagner parfaitement nos recettes street-food."
     },
     {
         icon: <Droplets size={32} className="text-secondary" />,
         title: "SAUCES MAISON",
-        desc: "Des recettes secrètes préparées chaque jour avec des ingrédients frais. Le game changer de nos burgers."
+        desc: "Des recettes secrètes préparées chaque jour avec des ingrédients frais. Le game changer de nos sandwichs."
     },
     {
         icon: <Award size={32} className="text-secondary" />,

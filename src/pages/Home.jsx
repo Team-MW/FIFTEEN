@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <main>
             <Hero />
-            <Marquee text="★ BURGERS ET SANDWICHS HALAL MAISON ★ POULET TANDOORI ★ FRITES MAISON ★" />
+            <Marquee text="★ SANDWICHS TANDOORI ★ BURGERS HALAL MAISON ★ FRITES MAISON ★" />
             <Promo10Euros />
             <Menu />
             <Story />

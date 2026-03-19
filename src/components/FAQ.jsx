@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const faqData = [
     {
         q: "Proposez-vous une alternative veggie ?",
-        a: "Oui, nous proposons une alternative végétarienne de très haute qualité sur presque toutes nos recettes, avec un steak végétal maison qui respecte l'ADN du vrai burger."
+        a: "Oui, nous proposons une alternative végétarienne de très haute qualité sur presque toutes nos recettes, avec un steak végétal maison qui respecte l'ADN de nos sandwichs."
     },
     {
         q: "D'où proviennent vos viandes ?",

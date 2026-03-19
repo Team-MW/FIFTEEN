@@ -21,7 +21,7 @@ const Footer = () => {
                         }}
                     />
                     <p style={{ color: '#777', lineHeight: 1.6, marginBottom: '2rem' }}>
-                        Burgers et sandwichs halal maison 🍔🍟<br />Frites maison
+                        Sandwichs Tandoori & Burgers halal maison 🌮🍔<br />Frites maison
                     </p>
                     <div style={{ display: 'flex', gap: '1rem' }}>
                         <a href="https://instagram.com/fifteen.toulouse" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', background: '#222', padding: '0.8rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.3s ease' }} onMouseOver={e => e.currentTarget.style.background = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.background = '#222'}>

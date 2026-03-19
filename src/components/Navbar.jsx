@@ -45,7 +45,7 @@ const Navbar = () => {
                     <Link to="/" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: 1, textDecoration: 'none', margin: '0.5rem 0' }}>
                         <span style={{ fontSize: '0.6rem', color: '#fff', fontFamily: "'Inter', sans-serif", letterSpacing: '2px', textTransform: 'uppercase' }}>Sandwichs</span>
                         <span style={{ fontSize: '2.5rem', fontWeight: 700, fontFamily: "'Anton', sans-serif", color: 'var(--primary)', letterSpacing: '2px', marginTop: '0.2rem' }}>FIFTEEN</span>
-                        <span style={{ fontSize: '0.6rem', color: '#fff', fontFamily: "'Inter', sans-serif", letterSpacing: '2px', textTransform: 'uppercase', marginTop: '0.2rem' }}>Hamburgers</span>
+                        <span style={{ fontSize: '0.6rem', color: '#fff', fontFamily: "'Inter', sans-serif", letterSpacing: '2px', textTransform: 'uppercase', marginTop: '0.2rem' }}>Sandwichs & Burgers</span>
                     </Link>
 
                     {/* Desktop Menu */}

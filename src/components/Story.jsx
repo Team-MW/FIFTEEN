@@ -45,10 +45,10 @@ const Story = () => {
                 >
                     <h2 style={{ fontSize: '3rem', color: '#fff', marginBottom: '1rem' }}>NOTRE <span className="text-primary">CONCEPT</span></h2>
                     <h3 style={{ fontSize: '1.5rem', color: '#888', marginBottom: '2rem', fontFamily: "'Inter', sans-serif", fontWeight: 400, textTransform: 'none' }}>
-                        Burgers, sandwichs et frites 100% halal et faits maison.
+                        Spécialité Sandwich Tandoori & Burgers 100% halal et faits maison.
                     </h3>
                     <p style={{ color: '#ccc', lineHeight: 1.8, fontSize: '1.1rem', marginBottom: '1.5rem' }}>
-                        Créé en 2022, <strong>FIFTEEN</strong> s'est imposé avec un seul but : proposer <strong>les sandwichs les plus géchar de Toulouse</strong> 🔥. On a mélangé l'art du bon burger avec la street-food authentique ultra-généreuse, notamment avec notre incontournable poulet Tandoori maison.
+                        Créé en 2022, <strong>FIFTEEN</strong> s'est imposé avec un seul but : proposer <strong>les sandwichs les plus géchar de Toulouse</strong> 🔥. On a redéfini le fast-food en y apportant la street-food authentique ultra-généreuse, avec comme grand favori notre incontournable sandwich poulet Tandoori maison.
                     </p>
                     <p style={{ color: '#ccc', lineHeight: 1.8, fontSize: '1.1rem', marginBottom: '2.5rem' }}>
                         Ici, zéro galère, que du lourd : toutes nos viandes sont strictement certifiées halal, nos frites de compétition sont coupées et cuites sur place, et les portions sont étudiées pour caler même les plus grosses faims. Pas de compromis sur le goût, on casse les codes.

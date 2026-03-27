@@ -16,6 +16,14 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const handleLinkClick = (e, path) => {
+        if (location.pathname === path) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        setIsOpen(false);
+    };
+
     const getHref = (hash) => {
         if (location.pathname === '/') return hash;
         return `/${hash}`;
@@ -42,7 +50,7 @@ const Navbar = () => {
             >
                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     {/* Logo FIFTEEN matching the real branding shape */}
-                    <Link to="/" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: 1, textDecoration: 'none', margin: '0.5rem 0' }}>
+                    <Link to="/" onClick={(e) => handleLinkClick(e, '/')} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: 1, textDecoration: 'none', margin: '0.5rem 0' }}>
                         <span style={{ fontSize: '0.6rem', color: '#fff', fontFamily: "'Inter', sans-serif", letterSpacing: '2px', textTransform: 'uppercase' }}>Sandwichs</span>
                         <span style={{ fontSize: '2.5rem', fontWeight: 700, fontFamily: "'Anton', sans-serif", color: 'var(--primary)', letterSpacing: '2px', marginTop: '0.2rem' }}>FIFTEEN</span>
                         <span style={{ fontSize: '0.6rem', color: '#fff', fontFamily: "'Inter', sans-serif", letterSpacing: '2px', textTransform: 'uppercase', marginTop: '0.2rem' }}>Sandwichs & Burgers</span>
@@ -118,7 +126,7 @@ const Navbar = () => {
                             gap: '2rem'
                         }}
                     >
-                        <Link to="/" onClick={() => setIsOpen(false)} style={{ fontSize: '3rem', fontFamily: "'Anton', sans-serif", color: 'var(--primary)', marginBottom: '2rem' }}>ACCUEIL</Link>
+                        <Link to="/" onClick={(e) => handleLinkClick(e, '/')} style={{ fontSize: '3rem', fontFamily: "'Anton', sans-serif", color: 'var(--primary)', marginBottom: '2rem' }}>ACCUEIL</Link>
                         <a href={getHref('#menu')} onClick={() => setIsOpen(false)} style={{ fontSize: '2.5rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>LA CARTE</a>
                         <a href={getHref('#concept')} onClick={() => setIsOpen(false)} style={{ fontSize: '2.5rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>LE CONCEPT</a>
                         <a href={getHref('#location')} onClick={() => setIsOpen(false)} style={{ fontSize: '2.5rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>RESTAURANTS</a>

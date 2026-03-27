@@ -10,18 +10,39 @@ const Social = () => {
     ];
 
     return (
-        <section className="section-padding" style={{ backgroundColor: '#000', overflow: 'hidden' }}>
-            <div className="container" style={{ textAlign: 'center' }}>
+        <section className="section-padding" style={{
+            backgroundColor: 'var(--primary)',
+            position: 'relative',
+            overflow: 'hidden',
+        }}>
+            {/* Background huge text */}
+            <div style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                whiteSpace: 'nowrap',
+                fontSize: 'clamp(10rem, 25vw, 20rem)',
+                fontFamily: "'Anton', sans-serif",
+                color: 'rgba(0,0,0,0.05)',
+                lineHeight: 1,
+                pointerEvents: 'none',
+                zIndex: 0
+            }}>
+                CRAAAAVING
+            </div>
+
+            <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
                 <motion.h2
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', color: '#fff', marginBottom: '1rem' }}
+                    style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', color: '#000', marginBottom: '1rem' }}
                 >
                     JOIN THE <span className="text-secondary">CLUB</span>
                 </motion.h2>
-                <p style={{ color: '#888', fontSize: '1.2rem', marginBottom: '4rem' }}>
-                    Suivez <strong className="text-primary">@fifteen.toulouse</strong> sur Instagram !
+                <p style={{ color: '#000', fontSize: '1.2rem', marginBottom: '4rem', fontWeight: 600 }}>
+                    Suivez <strong className="text-primary" style={{ color: '#000', textShadow: 'none' }}>@fifteen.toulouse</strong> sur Instagram !
                 </p>
 
                 <div style={{
@@ -44,7 +65,7 @@ const Social = () => {
                                 borderRadius: '20px',
                                 overflow: 'hidden',
                                 position: 'relative',
-                                border: '2px solid #222',
+                                border: '2px solid #000',
                                 cursor: 'pointer'
                             }}
                             className="social-card"
@@ -55,7 +76,7 @@ const Social = () => {
                                 style={{
                                     position: 'absolute',
                                     inset: 0,
-                                    background: 'rgba(227, 24, 55, 0.8)',
+                                    background: 'rgba(0, 0, 0, 0.8)',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
@@ -64,7 +85,7 @@ const Social = () => {
                                     zIndex: 10
                                 }}
                             >
-                                <span style={{ fontFamily: "'Anton', sans-serif", fontSize: '2rem', color: '#fff', transform: 'translateY(20px)', transition: 'transform 0.3s ease' }} className="social-icon">❤️</span>
+                                <span style={{ fontFamily: "'Anton', sans-serif", fontSize: '2rem', color: 'var(--primary)', transform: 'translateY(20px)', transition: 'transform 0.3s ease' }} className="social-icon">❤️</span>
                             </div>
 
                             <img
@@ -100,17 +121,18 @@ const Social = () => {
                     <a href="https://instagram.com/fifteen.toulouse" target="_blank" rel="noopener noreferrer" style={{
                         background: 'transparent',
                         display: 'inline-block',
-                        color: '#fff',
-                        border: '2px solid #fff',
+                        color: '#000',
+                        border: '2px solid #000',
                         padding: '1rem 3rem',
                         fontSize: '1.1rem',
                         borderRadius: '50px',
                         textTransform: 'uppercase',
                         transition: 'all 0.3s ease',
-                        textDecoration: 'none'
+                        textDecoration: 'none',
+                        fontWeight: 600
                     }}
-                        onMouseOver={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = '#000'; }}
-                        onMouseOut={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#fff'; }}
+                        onMouseOver={e => { e.currentTarget.style.background = '#000'; e.currentTarget.style.color = 'var(--primary)'; }}
+                        onMouseOut={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#000'; }}
                     >
                         SUIVEZ-NOUS SUR INSTAGRAM
                     </a>

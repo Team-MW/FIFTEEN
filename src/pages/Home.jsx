@@ -2,7 +2,6 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Marquee from '../components/Marquee';
 import Promo10Euros from '../components/Promo10Euros';
-import Menu from '../components/Menu';
 import Story from '../components/Story';
 import Social from '../components/Social';
 import Location from '../components/Location';
@@ -20,7 +19,6 @@ const Home = () => {
             <Social />
             <Location />
             <FAQ />
-            <Menu />
         </main>
     );
 };

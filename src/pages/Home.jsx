@@ -15,12 +15,12 @@ const Home = () => {
             <Hero />
             <Marquee text="★ SANDWICHS TANDOORI ★ BURGERS HALAL MAISON ★ FRITES MAISON ★" />
             <Promo10Euros />
-            <Menu />
+            <Banner />
             <Story />
             <Social />
             <Location />
             <FAQ />
-            <Banner />
+            <Menu />
         </main>
     );
 };

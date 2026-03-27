@@ -48,23 +48,25 @@ const Banner = () => {
                     Passez commande maintenant et rejoignez le mouvement FIFTEEN.
                 </p>
 
-                <motion.button
-                    whileHover={{ scale: 1.05, backgroundColor: '#111' }}
-                    whileTap={{ scale: 0.95 }}
-                    style={{
-                        background: '#000',
-                        color: 'var(--primary)',
-                        padding: '1.5rem 4rem',
-                        fontSize: '1.5rem',
-                        borderRadius: '50px',
-                        textTransform: 'uppercase',
-                        border: 'none',
-                        boxShadow: '0 15px 30px rgba(0,0,0,0.3)',
-                        cursor: 'pointer'
-                    }}
-                >
-                    COMMANDE EN LIGNE
-                </motion.button>
+                <a href="https://www.ubereats.com/fr/store/fifteen/HIYxsy62UzeHjO4kQWZfWA?srsltid=AfmBOoq1g_Sawp0cbP9RNuSVSCUqFN7AfRW2Fzt0PdIB3xdf1XMwcd4I" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                    <motion.button
+                        whileHover={{ scale: 1.05, backgroundColor: '#111' }}
+                        whileTap={{ scale: 0.95 }}
+                        style={{
+                            background: '#000',
+                            color: 'var(--primary)',
+                            padding: '1.5rem 4rem',
+                            fontSize: '1.5rem',
+                            borderRadius: '50px',
+                            textTransform: 'uppercase',
+                            border: 'none',
+                            boxShadow: '0 15px 30px rgba(0,0,0,0.3)',
+                            cursor: 'pointer'
+                        }}
+                    >
+                        COMMANDE EN LIGNE
+                    </motion.button>
+                </a>
             </div>
         </section>
     );

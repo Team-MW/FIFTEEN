@@ -64,7 +64,7 @@ const Navbar = () => {
                             <li><a href={getHref('#location')} style={{ transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--primary)'} onMouseOut={e => e.target.style.color = 'var(--text-light)'}>NOS RESTOS</a></li>
                         </ul>
                         <a
-                            href="https://www.ubereats.com/store/fifteen/HlYxsy62UzeHjO4kQWZfWA"
+                            href="https://www.ubereats.com/fr/store/fifteen/HIYxsy62UzeHjO4kQWZfWA?srsltid=AfmBOoq1g_Sawp0cbP9RNuSVSCUqFN7AfRW2Fzt0PdIB3xdf1XMwcd4I"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{
@@ -132,7 +132,7 @@ const Navbar = () => {
                         <a href={getHref('#location')} onClick={() => setIsOpen(false)} style={{ fontSize: '2.5rem', fontFamily: "'Anton', sans-serif", color: '#fff' }}>RESTAURANTS</a>
 
                         <a
-                            href="https://www.ubereats.com/store/fifteen/HlYxsy62UzeHjO4kQWZfWA"
+                            href="https://www.ubereats.com/fr/store/fifteen/HIYxsy62UzeHjO4kQWZfWA?srsltid=AfmBOoq1g_Sawp0cbP9RNuSVSCUqFN7AfRW2Fzt0PdIB3xdf1XMwcd4I"
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => setIsOpen(false)}

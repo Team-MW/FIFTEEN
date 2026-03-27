@@ -27,7 +27,7 @@ const Footer = () => {
                         <a href="https://instagram.com/fifteen.toulouse" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', background: '#222', padding: '0.8rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.3s ease' }} onMouseOver={e => e.currentTarget.style.background = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.background = '#222'}>
                             <Instagram size={20} />
                         </a>
-                        <a href="https://www.ubereats.com/store/fifteen/HlYxsy62UzeHjO4kQWZfWA" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', background: '#222', padding: '0.8rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.3s ease' }} onMouseOver={e => e.currentTarget.style.background = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.background = '#222'}>
+                        <a href="https://www.ubereats.com/fr/store/fifteen/HIYxsy62UzeHjO4kQWZfWA?srsltid=AfmBOoq1g_Sawp0cbP9RNuSVSCUqFN7AfRW2Fzt0PdIB3xdf1XMwcd4I" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', background: '#222', padding: '0.8rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.3s ease' }} onMouseOver={e => e.currentTarget.style.background = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.background = '#222'}>
                             <ShoppingBag size={20} />
                         </a>
                     </div>

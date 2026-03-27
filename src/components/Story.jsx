@@ -55,7 +55,7 @@ const Story = () => {
                     </p>
 
                     <div className="stack-mobile" style={{ display: 'flex', gap: '1rem' }}>
-                        <a href="https://www.ubereats.com/store/fifteen/HlYxsy62UzeHjO4kQWZfWA" target="_blank" rel="noopener noreferrer" style={{
+                        <a href="https://www.ubereats.com/fr/store/fifteen/HIYxsy62UzeHjO4kQWZfWA?srsltid=AfmBOoq1g_Sawp0cbP9RNuSVSCUqFN7AfRW2Fzt0PdIB3xdf1XMwcd4I" target="_blank" rel="noopener noreferrer" style={{
                             background: 'var(--primary)',
                             color: '#000',
                             padding: '1rem 2.5rem',

@@ -41,7 +41,7 @@ const Hero = () => {
                     </div>
 
                     <div className="stack-mobile hero-cta-container">
-                        <a href="https://www.ubereats.com/store/fifteen/HlYxsy62UzeHjO4kQWZfWA" target="_blank" rel="noopener noreferrer" className="hero-cta-button"
+                        <a href="https://www.ubereats.com/fr/store/fifteen/HIYxsy62UzeHjO4kQWZfWA?srsltid=AfmBOoq1g_Sawp0cbP9RNuSVSCUqFN7AfRW2Fzt0PdIB3xdf1XMwcd4I" target="_blank" rel="noopener noreferrer" className="hero-cta-button"
                             onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'}
                             onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
                         >
